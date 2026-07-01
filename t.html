@@ -1,0 +1,288 @@
+> Rihana:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BlueSky — Elevate Your Business</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet" />
+    <style>
+        /* ── reset & base ── */
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #0b0d12;
+            padding: 1.5rem;
+        }
+
+        /* ── card container ── */
+        .card {
+            max-width: 1100px;
+            width: 100%;
+            background: linear-gradient(145deg, #13171f, #0e1118);
+            border-radius: 2.5rem;
+            padding: 4rem 3.5rem 3rem;
+            box-shadow:
+                0 30px 80px rgba(0, 0, 0, 0.7),
+                inset 0 1px 0 rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            transition: all 0.2s ease;
+        }
+
+        /* ── typography ── */
+        .tagline {
+            font-size: 1rem;
+            font-weight: 600;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.25);
+            margin-bottom: 1rem;
+        }
+
+        .main-heading {
+            font-size: clamp(2.6rem, 6vw, 4.8rem);
+            font-weight: 800;
+            line-height: 1.08;
+            letter-spacing: -0.02em;
+            color: #ffffff;
+            margin-bottom: 0.3rem;
+        }
+
+        .main-heading span {
+            background: linear-gradient(135deg, #f0f4ff 0%, #94a3b8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .sub-heading {
+            font-size: clamp(1.1rem, 2vw, 1.6rem);
+            font-weight: 400;
+            color: rgba(255, 255, 255, 0.5);
+            margin-bottom: 2.5rem;
+            letter-spacing: -0.01em;
+        }
+
+        /* ── CTA button ── */
+        .btn {
+            display: inline-block;
+            background: #ffffff;
+            color: #0b0d12;
+            font-weight: 700;
+            font-size: 1.05rem;
+            padding: 0.9rem 2.8rem;
+            border-radius: 60px;
+            text-decoration: none;
+            letter-spacing: 0.02em;
+            transition: all 0.25s ease;
+            box-shadow: 0 8px 30px rgba(255, 255, 255, 0.06);
+            border: none;
+            cursor: pointer;
+            margin-bottom: 3.5rem;
+        }
+
+        .btn:hover {
+            background: #f0f4ff;
+            transform: scale(1.02);
+            box-shadow: 0 12px 40px rgba(255, 255, 255, 0.12);
+        }
+
+        /* ── feature badges ── */
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.2rem 2.5rem;
+            margin-bottom: 3.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+
+        .feature-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #ffffff;
+            opacity: 0.25;
+            flex-shrink: 0;
+        }
+
+        .feature-item span {
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.55);
+        }
+
+> Rihana:
+/* ── testimonial ── */
+        .testimonial {
+            display: flex;
+            flex-direction: column;
+            gap: 0.3rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .testimonial-text {
+            font-size: clamp(1.2rem, 1.6vw, 1.6rem);
+            font-weight: 600;
+            color: #ffffff;
+            letter-spacing: -0.01em;
+        }
+
+        .testimonial-text .quote-mark {
+            color: rgba(255, 255, 255, 0.15);
+            font-weight: 400;
+            margin-right: 0.1rem;
+        }
+
+        .testimonial-author {
+            font-size: 0.95rem;
+            font-weight: 400;
+            color: rgba(255, 255, 255, 0.35);
+        }
+
+        .testimonial-author strong {
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.55);
+        }
+
+        /* ── footer ── */
+        .footer {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+            padding-top: 1.8rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.04);
+            font-size: 0.8rem;
+            font-weight: 400;
+            color: rgba(255, 255, 255, 0.2);
+            letter-spacing: 0.02em;
+        }
+
+        .footer .policy {
+            color: rgba(255, 255, 255, 0.25);
+            transition: color 0.2s ease;
+            cursor: default;
+        }
+
+        .footer .policy:hover {
+            color: rgba(255, 255, 255, 0.45);
+        }
+
+        /* ── responsive ── */
+        @media (max-width: 640px) {
+            .card {
+                padding: 2.5rem 1.8rem 2rem;
+                border-radius: 1.8rem;
+            }
+
+            .features {
+                gap: 1rem 1.8rem;
+            }
+
+            .feature-item span {
+                font-size: 0.75rem;
+            }
+
+            .btn {
+                width: 100%;
+                text-align: center;
+                padding: 0.9rem 1.5rem;
+            }
+
+            .footer {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.4rem;
+                font-size: 0.7rem;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .card {
+                padding: 1.8rem 1.2rem 1.5rem;
+            }
+
+            .main-heading {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+
+        <!-- tagline (optional extra) -->
+        <div class="tagline">✦ next‑gen studio</div>
+
+        <!-- main heading -->
+        <h1 class="main-heading">
+            <span>ELEVATE YOUR</span><br />
+            BUSINESS TODAY.
+        </h1>
+
+        <!-- sub-heading -->
+        <p class="sub-heading">Modern Solutions for Growth.</p>
+
+        <!-- CTA -->
+        <a href="#" class="btn">GET STARTED</a>
+
+        <!-- feature badges -->
+        <div class="features">
+            <div class="feature-item">
+                <span class="feature-dot"></span>
+                <span>MODERN DESIGN</span>
+            </div>
+            <div class="feature-item">
+                <span class="feature-dot"></span>
+                <span>USER FOCUSED</span>
+            </div>
+            <div class="feature-item">
+                <span class="feature-dot"></span>
+                <span>DATA DRIVEN</span>
+            </div>
+        </div>
+
+        <!-- testimonial -->
+        <div class="testimonial">
+            <p class="testimonial-text">
+                <span class="quote-mark">“</span>AMAZING SERVICE! Highly recommended.
+            </p>
+            <p class="testimonial-author">
+                <strong>Jane Doe</strong>, CEO
+            </p>
+        </div>
+
+        <!-- footer -->
+        <div class="footer">
+            <span>© 2023, All Rights Reserved.</span>
+            <span class="policy">BlueSky Policy</span>
+        </div>
+
+    </div>
+
+</body>
+</html>
